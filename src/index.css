@@ -10,6 +10,8 @@ body {
 }
 
 .App {
+  width: 90vw;
+  margin-left: 5vw;
   text-align: center;
 }
 
@@ -22,14 +24,13 @@ input {
   margin-bottom: 1.5rem;
 }
 
-.hide {
-  width: 7.5vw;
-  border: none;
-}
-
 .show {
   width: 7.5vw;
   background: crimson;
   color: #FFF;
   font-weight: bold;
+}
+
+ul {
+  list-style: none;
 }
