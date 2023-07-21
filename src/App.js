@@ -10,7 +10,10 @@ export const ACTIONS = {
 function reducer(executions, action) {
   switch (action.type) {
     case ACTIONS.ADD_EXECUTION:
-      return [...executions, newExecution(action.stack.enteredText)];
+      return [
+        ...executions,
+        newExecution(action.stack.enteredText, executions.length),
+      ];
     case ACTIONS.TOGGLE_EXECUTION:
       return executions.map((execution) => {
         if (execution.id === action.stack.id) {
@@ -25,8 +28,8 @@ function reducer(executions, action) {
   }
 }
 
-function newExecution(enteredText) {
-  return { id: Date.now(), enteredText: enteredText, done: false };
+function newExecution(enteredText, id) {
+  return { id, enteredText: enteredText, done: false };
 }
 
 const App = () => {
@@ -52,9 +55,17 @@ const App = () => {
           onChange={(event) => setEnteredText(event.target.value)}
         />
       </form>
-      {executions.map((execution) => {
-        return <Execution execution={execution} dispatch={dispatch} />;
-      })}
+      <ul>
+        {executions.map((execution) => {
+          return (
+            <Execution
+              key={execution.id}
+              execution={execution}
+              dispatch={dispatch}
+            />
+          );
+        })}
+      </ul>
     </div>
   );
 };
