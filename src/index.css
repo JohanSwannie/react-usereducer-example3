@@ -14,10 +14,9 @@ body {
 }
 
 input {
-  width: 40%;
-  line-height: 2;
-  background: navy;
   color: white;
+  background: navy;
+  width: 60%;
   font-size: 19px;
   font-weight: bold;
   margin-bottom: 1.5rem;
