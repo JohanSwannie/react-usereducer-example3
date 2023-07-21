@@ -10,22 +10,21 @@ body {
 }
 
 .App {
-  width: 90vw;
-  margin-left: 5vw;
+  width: 100vw;
   text-align: center;
 }
 
 input {
   color: white;
   background: navy;
-  width: 60%;
+  width: 60vw;
   font-size: 19px;
   font-weight: bold;
   margin-bottom: 1.5rem;
 }
 
 .show {
-  width: 7.5vw;
+  width: 7vw;
   background: crimson;
   color: #FFF;
   font-weight: bold;
@@ -34,3 +33,4 @@ input {
 ul {
   list-style: none;
 }
+
