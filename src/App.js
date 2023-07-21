@@ -29,7 +29,7 @@ function newExecution(enteredText) {
   return { id: Date.now(), enteredText: enteredText, done: false };
 }
 
-export default function App() {
+const App = () => {
   const [executions, dispatch] = useReducer(reducer, []);
   const [enteredText, setEnteredText] = useState("");
 
@@ -57,4 +57,6 @@ export default function App() {
       })}
     </div>
   );
-}
+};
+
+export default App;
