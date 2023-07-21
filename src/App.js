@@ -53,13 +53,7 @@ export default function App() {
         />
       </form>
       {executions.map((execution) => {
-        return (
-          <Execution
-            key={execution.id}
-            execution={execution}
-            dispatch={dispatch}
-          />
-        );
+        return <Execution execution={execution} dispatch={dispatch} />;
       })}
     </div>
   );
