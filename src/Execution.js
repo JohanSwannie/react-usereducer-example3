@@ -22,7 +22,7 @@ export default function Execution({ execution, dispatch }) {
         >
           Toggle
         </button>
-        <p
+        <li
           style={{
             width: "70vw",
             fontSize: "37px",
@@ -33,7 +33,7 @@ export default function Execution({ execution, dispatch }) {
           }}
         >
           {execution.enteredText}
-        </p>
+        </li>
         <button
           className="show"
           onClick={() =>
