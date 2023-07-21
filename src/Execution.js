@@ -3,12 +3,11 @@ import { ACTIONS } from "./App";
 const divStyle = {
   display: "grid",
   gridTemplateColumns: "repeat(3, 1fr)",
-  margin: "auto",
 };
 
 export default function Execution({ execution, dispatch }) {
   const listStyle = {
-    width: "70vw",
+    width: "80vw",
     fontSize: "37px",
     fontWeight: "bold",
     textAlign: "center",
