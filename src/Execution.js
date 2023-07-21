@@ -8,7 +8,7 @@ const divStyle = {
 export default function Execution({ execution, dispatch }) {
   const listStyle = {
     width: "80vw",
-    fontSize: "37px",
+    fontSize: "30px",
     fontWeight: "bold",
     textAlign: "center",
     color: execution.done ? "navy" : "crimson",
