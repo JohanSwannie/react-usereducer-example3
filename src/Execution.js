@@ -1,14 +1,22 @@
 import { ACTIONS } from "./App";
 
+const divStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  margin: "auto",
+};
+
 export default function Execution({ execution, dispatch }) {
+  const listStyle = {
+    width: "70vw",
+    fontSize: "37px",
+    fontWeight: "bold",
+    textAlign: "center",
+    color: execution.done ? "navy" : "crimson",
+    fontFamily: execution.done ? "Sofia" : "Tangerine",
+  };
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(3, 1fr)",
-        margin: "auto",
-      }}
-    >
+    <div style={divStyle}>
       <button
         className="show"
         onClick={() =>
@@ -20,18 +28,7 @@ export default function Execution({ execution, dispatch }) {
       >
         Toggle
       </button>
-      <li
-        style={{
-          width: "70vw",
-          fontSize: "37px",
-          fontWeight: "bold",
-          textAlign: "center",
-          color: execution.done ? "navy" : "crimson",
-          fontFamily: execution.done ? "Sofia" : "Tangerine",
-        }}
-      >
-        {execution.enteredText}
-      </li>
+      <li style={listStyle}>{execution.enteredText}</li>
       <button
         className="show"
         onClick={() =>
