@@ -56,15 +56,13 @@ const App = () => {
         />
       </form>
       <ul>
-        {executions.map((execution) => {
-          return (
-            <Execution
-              key={execution.id}
-              execution={execution}
-              dispatch={dispatch}
-            />
-          );
-        })}
+        {executions.map((execution) => (
+          <Execution
+            key={execution.id}
+            execution={execution}
+            dispatch={dispatch}
+          />
+        ))}
       </ul>
     </div>
   );
